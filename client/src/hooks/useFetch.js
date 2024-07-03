@@ -10,6 +10,7 @@ const useFetch = (url) => {
     const fetchData = async () => {
       try {
         setLoading(true);
+        console.log( "t" + process.env.REACT_APP_API_URL);
         const res = await makeRequest.get(url);
         setData(res.data.data);
       } catch (error) {
